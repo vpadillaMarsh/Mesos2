@@ -1,0 +1,218 @@
+
+/* --------------------------------- */
+/* --------- General --------------- */
+/* --------------------------------- */
+
+#landing{
+    padding-top: 120px;
+}
+
+#landing #lines-container{
+    position: relative;
+}
+
+#landing #extra-right{
+    background: rgb(25,64,130);
+    background: linear-gradient(90deg, rgba(25,64,130,1) 0%, rgba(37,99,202,1) 50%, rgba(59,128,242,1) 100%); 
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    border-radius: 10px;
+    padding: 24px 30px;
+}
+
+#landing #extra-bottom{
+    background: rgb(25,64,130);
+    background: linear-gradient(90deg, rgba(25,64,130,1) 0%, rgba(37,99,202,1) 50%, rgba(59,128,242,1) 100%);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+#landing .hidden{
+    display: none !important;
+}
+
+/* --------------------------------- */
+/* --------- Right side ------------ */
+/* --------------------------------- */
+
+#landing #extra-right strong{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+#landing #extra-right h4{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+#landing #extra-right h2{
+    color: white;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+
+#landing #extra-right li{
+    color: white;
+    margin-top: 11px;
+    display: flex;
+}
+
+#landing #extra-right p{
+    font-size: 17px;
+    color: white;
+    text-align: justify;
+
+}
+
+#landing #extra-right li p{
+    text-align: left;
+}
+
+#landing #extra-right li img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#landing #extra-right button{
+    width: 100%;
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* --------------------------------- */
+/* -------- Bottom side ------------ */
+/* --------------------------------- */
+
+#landing #extra-bottom strong{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#landing #extra-bottom h5{
+    color: white;
+    text-align: justify;
+}
+
+#landing #extra-bottom li img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#landing #extra-bottom li{
+    margin: 10px 0px;
+    color: white;
+    display: flex;
+}
+
+#landing #extra-bottom button{
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#landing #extra-bottom li p{
+    font-size: 17px;
+}
+
+/* --------------------------------- */
+/* -------- Left side -------------- */
+/* --------------------------------- */
+
+#landing h1{
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+#landing .line{
+    display: flex;
+    padding: 7px 1px;
+}
+
+#landing article{
+    display: flex;
+    align-items: center;
+    width: 370px;
+    color: black;
+    padding: 5px 10px;
+}
+
+#landing article:hover{
+    color: grey;
+    cursor: pointer;
+}
+
+#landing article img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#landing article .fkn-svg{
+    padding: 0 8px 0 7px;
+}
+
+#landing article p{
+    text-align: justify;
+    /*font-family: 'Merriweather Sans', sans-serif;*/
+
+}
+
+#landing article h5{
+    font-weight: bold;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+
+/* --------------------------------- */
+/* --------- Responsive ------------ */
+/* --------------------------------- */
+
+@media (max-width: 992px){
+    #landing h1{
+        text-align: center;
+    }
+}
+
+/* -------------------------------------- */
+/* -------------------------------------- */
+/* -------------------------------------- */
+
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,171 @@
+
+/* --------------------------------- */
+/* ----------- General ------------- */
+/* --------------------------------- */
+
+:root{
+    --strong-color: black;
+    --mesos-blue: #0077C8;
+    --font-size: 17px;
+    --margin-elements: 30px;
+    --progress-bar: #f9f9f9;
+    --arrow-bg: #cccccc;
+    --arrow-color: #989898;
+    --font-color: #444;
+}
+
+#article-section{
+    text-align: justify;
+    font-size: var(--font-size);
+    color: var(--font-color);
+    margin-top: 100px;
+}
+
+#article-section p{
+    margin-bottom: var(--margin-elements);
+    font-size: var(--font-size);
+}
+
+#article-section strong{
+    color: var(--strong-color);
+}
+
+
+/* --------------------------------- */
+/* --------- Lists ----------------- */
+/* --------------------------------- */
+
+#article-section ul, #article-section ol{
+    margin-left: 30px;
+    margin-bottom: var(--margin-elements);
+}
+#article-section .numeric-item{
+    list-style: decimal;
+}
+
+#article-section .dotted-item{
+    list-style-type: disc;
+}
+#article-section li{
+    margin-bottom: 3px;
+}
+
+/* --------------------------------- */
+/* -------- Main sections ---------- */
+/* --------------------------------- */
+
+#article-section #nav{
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+#article-section #title{
+    color: var(--strong-color);
+    font-size: 32px;
+    margin: 50px 0px 15px 0px;
+}
+
+#article-section #date{
+    font-size: 14px;
+}
+
+#article-section #subtitle{
+    font-size: 20px;
+    margin: 50px 0px;
+}
+
+#article-section #hero-image{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/* --------------------------------- */
+/* ------- Progress bar ------------ */
+/* --------------------------------- */
+
+#article-progress-bar{
+    position: fixed;
+    bottom: 0px;
+    height: 40px;
+    z-index: 1;
+    background-color: var(--progress-bar);
+}
+
+#article-progress-bar #arrow-container{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+#article-progress-bar .arrow{
+    background-color: var(--mesos-blue);
+    height: 10px;
+}
+
+/* --------------------------------- */
+/* ----------- Up Arrow ------------ */
+/* --------------------------------- */
+
+#article-up-arrow{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background-color: var(--arrow-bg);
+  color: var(--arrow-color);
+  padding: 25px;
+  border-radius: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* --------------------------------- */
+/* --------- Animations ------------ */
+/* --------------------------------- */
+
+
+.fade-out {
+	-webkit-animation: fade-out 0.5s ease-out both;
+	        animation: fade-out 0.5s ease-out both;
+}
+
+.fade-in {
+	-webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+ @-webkit-keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

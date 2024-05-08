@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+      <meta property="og:title" content="SOAP" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content=" | Contrata tu soap a precio imperdible">
+      <meta property="og:description" content="Valída tus datos para contratar tu seguro obligatorio al mejor precio">
+      <meta property="og:image" content="https://www.mesos.cl/assets/img/firma/Logo-mesos.png">
+      <title>Soap </title>
+      <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/style.css"> 
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+      <script src="funcion.js" type="text/javascript" charset="utf-8" async defer></script>
+      <style type="text/css" media="screen">
+         body {
+         color: #5a5c63;
+         text-align: center;
+         }
+         input {
+         text-align: center;
+         color: #5a5c63;
+         font-weight: 600;
+         }
+         #loader {
+           border: 16px solid #f3f3f3;
+           border-radius: 50%;
+           border-top: 16px solid #0077c8;
+           border-bottom: 16px solid #0077c8;
+           width: 120px;
+           height: 120px;
+           -webkit-animation: spin 2s linear infinite;
+           animation: spin 2s linear infinite;
+            position: absolute;
+          left: 43%;
+          top: 40%;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+         }
+         .contenedor-load{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: white;
+            z-index: 9999;
+         }
+         @-webkit-keyframes spin {
+           0% { -webkit-transform: rotate(0deg); }
+           100% { -webkit-transform: rotate(360deg); }
+         }
+
+         @keyframes spin {
+           0% { transform: rotate(0deg); }
+           100% { transform: rotate(360deg); }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="cont-body">
+      <div style="background-color:#f9f9f9;height:60px;margin-bottom: 15px; padding-top:5px;">
+         <div class="col-md-2 col-sm-12 col-xs-12 " style="float:left; padding-left:20px;" id="logoMesos"><img src="img/logo.png" width="151" height="52"></div>
+         <div class="col-md-2 col-sm-12 col-xs-12 " style="float:left; padding-left:20px;" id="logoPortillo"><img src="img/portillo.png" width="151" height="52"></div>
+         <div class="col-md-10 col-sm-12 col-xs-12 " style="font-size:18px;padding-top:12px;font-family:Arial, Helvetica, sans-serif;background: #f9f9f9;    margin-bottom: 15px;">
+            <span class="col-md-4"><span style="font-size:25px;font-weight: bold;">1</span> Completa los campos</span>
+            <span class="col-md-4"><span style="font-size:25px;font-weight: bold;">2</span> Paga tu <strong>SOAP</strong></span>
+            <span class="col-md-4"><span style="font-size:25px;font-weight: bold;">3</span> Recibe tu <strong>SOAP</strong> por email</span>
+         </div>
+      </div>
+      <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1" style="text-align: center;background-color: #FFFFFF;border-radius: 25px; margin-bottom: 30px;">
+         <br>
+         <h1 style="font-size:25px; font-weight:bold; font-family: sans-serif;background-color: #0077c8;color: #ffffff;padding: 10px;">SOAP 2020</h1>
+         <br><br>
+         <div style="font-family: sans-serif;font-size: 16px;font-weight: bold; margin-bottom:15px">*COMPLETA LOS CAMPOS EN BLANCO PARA GENERAR TU SOAP</div><br><br>
+         <form class="form-horizontal" id="formulario">
+            <div class="form-group">
+               <label for="inputEmail3" class="col-sm-2 control-label">Propuesta</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" readonly id="propuestaid" placeholder="">
+                  <input type="text" class="form-control"  style="display: none;" readonly id="convenioid" placeholder="">
+                  <input type="text" class="form-control"  style="display: none;" readonly id="precioid" placeholder="">
+                  <input type="text" class="form-control"  style="display: none;" readonly id="idoperacion" placeholder="">
+               </div>
+            </div>
+            <div class="form-group" id="formNombre">
+               <label for="inputEmail3" class="col-sm-2 control-label">Nombres</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtNombre" readonly  placeholder="Carlos Pinto">
+               </div>
+            </div>
+            <div class="form-group" id="formPaterno">
+               <label for="inputEmail3" class="col-sm-2 control-label">Apellido Paterno</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtPaterno" readonly placeholder="Carlos Pinto">
+               </div>
+            </div>
+            <div class="form-group" id="formMaterno">
+               <label for="inputEmail3" class="col-sm-2 control-label">Apellido Materno</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtMaterno" readonly placeholder="Carlos Pinto">
+               </div>
+            </div>
+            <div class="form-group" >
+               <label for="inputPassword3" class="col-sm-2 control-label">Rut</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtRut" readonly placeholder="12.123.123-4">
+               </div>
+            </div>
+            <div class="form-group" id="formTelefono">
+               <label for="inputPassword3" class="col-sm-2 control-label">Teléfono</label>
+               <div class="col-sm-9">
+                  <input type="number" class="form-control" id="txtTelefono" placeholder="962 62 172" >
+               </div>
+            </div>
+            <div class="form-group" id="formCorreo">
+               <label for="inputPassword3" class="col-sm-2 control-label">Correo</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtCorreo" placeholder="micorreo@ejemplo.com" style="text-transform: uppercase;">
+               </div>
+            </div>
+            <br>
+            <div class="form-group">
+               <h4>Vehículo</h4>
+            </div>
+            <br>
+            <div class="form-group">
+               <label for="inputPassword3" class="col-sm-2 control-label">Patente</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtPatente" style="text-transform: uppercase;" >
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="inputPassword3" class="col-sm-2 control-label">Marca</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtMarca"  readonly >
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="inputPassword3" class="col-sm-2 control-label">Modelo</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtModelo"   readonly>
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="inputPassword3" class="col-sm-2 control-label">Año</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtAnio"  readonly>
+               </div>
+            </div>
+            <div class="form-group" style="display: none">
+               <label for="inputPassword3" class="col-sm-2 control-label">Nº Chasis</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtChasis"  readonly>
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="inputPassword3" class="col-sm-2 control-label">Nº Motor</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtMotor"  readonly>
+               </div>
+            </div>
+            <div class="form-group" style="display: none">
+               <label for="inputPassword3" class="col-sm-2 control-label">Color</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="txtColor" readonly>
+               </div>
+            </div><br>
+            <div class="form-group" >
+               <div class="checkbox col-xs-8 col-xs-offset-2">
+                   <label><input  id="chbx-terminos" type="checkbox" value="">He leído y acepto los <a href="#" data-toggle="modal" data-target="#exampleModalLong">términos y condiciones</a></label>
+               </div>
+            </div>
+           
+            
+            <div class="form-group">
+               <div class="col-sm-offset-2 col-sm-10">
+                  <div class="checkbox">
+                  </div>
+               </div>
+            </div>
+            <div  id="idPrecio" style="font-size:36px;font-weight: bold;margin-bottom: 20px;">{precio}</div>
+            <div class="form-group">
+               <div class="col-sm-offset-1 col-sm-10">
+                  <button type="button" id="btn-pago" class="btn btn-info">Pagar aquí</button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+      <div class="contenedor-load"><br><br><br><br><br><h2 style="color: #949494;">Estamos cargando su información</h2>
+         <div id="loader">
+         </div>
+      </div>
+
+
+      <!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Términos y Condiciones</h4>
+      </div>
+      <div class="modal-body" style="text-align: justify;">
+         <div id="cont-terminos">
+            
+         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal  Alerta Terminos -->
+<div class="modal fade" id="alertaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Antes de pagar</h4>
+      </div>
+      <div class="modal-body">
+         Debe leer y aceptar los términos y condiciones para continuar.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+   </body>
+</html>

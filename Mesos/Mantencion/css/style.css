@@ -1,0 +1,46 @@
+/* Mesos */
+/* Victor Padilla */
+/* Analista Programador*/
+body{
+	margin:0px;
+	background-image: url("../images/fondo.jpg") ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	 background-attachment: fixed;
+
+	 font-family: "Arial";
+
+
+}
+.letras {
+
+	font-size: 24px;
+	color: #868686;
+}
+.cont-letras{
+	margin-top: 15%;
+}
+.logo-mesos{
+	margin-top: 50px;
+	width: 200px;
+}
+.cont-sitio{
+	margin-top: 15%;
+}
+.cont-sitio img{
+	width: 100%;
+}
+.img-trabajo{
+	margin-left: 10%;
+	margin-top: 10%;
+	width: 80%;
+}
+
+@media only screen and (max-width: 767px) {
+.cont-sitio img{
+	width: 60%;
+}
+.letras{
+	color:#b5b0b0;
+}
+}
